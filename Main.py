@@ -3,19 +3,17 @@ class ItemBiblioteca:
         self._titulo = titulo
         self.ano_publicacao = ano_publicacao
 
-    @property
-    def titulo(self):
+        def titulo(self):
         return self._titulo
 
-    @titulo.setter
+
     def titulo(self, valor):
         self._titulo = valor
 
-    @property
-    def ano_publicacao(self):
+        def ano_publicacao(self):
         return self._ano_publicacao
 
-    @ano_publicacao.setter
+    
     def ano_publicacao(self, valor):
         if valor > 0:
             self._ano_publicacao = valor
@@ -32,11 +30,11 @@ class Livro(ItemBiblioteca):
         self._autor = autor
         self.num_paginas = num_paginas
 
-    @property
+    
     def num_paginas(self):
         return self._num_paginas
 
-    @num_paginas.setter
+    
     def num_paginas(self, valor):
         if valor > 50:
             self._num_paginas = valor
@@ -97,7 +95,6 @@ def listar_acervo():
     print()
 
 
-# MENU INTERATIVO
 while True:
     print("--- Sistema de Biblioteca ---")
     print("1. Cadastrar Livro")
@@ -117,3 +114,4 @@ while True:
         break
     else:
         print("Opção inválida!\n")
+
